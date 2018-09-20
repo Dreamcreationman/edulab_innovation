@@ -23,8 +23,8 @@ public abstract class BaseUserAuths<M extends BaseUserAuths<M>> extends Model<M>
 		return (M)this;
 	}
 	
-	public java.lang.Long getUserId() {
-		return getLong("userId");
+	public java.lang.Integer getUserId() {
+		return getInt("userId");
 	}
 
 	public M setIdentityType(java.lang.String identityType) {

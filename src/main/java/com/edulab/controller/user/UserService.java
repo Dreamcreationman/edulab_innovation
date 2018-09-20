@@ -91,6 +91,7 @@ public class UserService {
         if (msg.equals("登录成功")) {
             updateLoginSuccess(userAuths.getIdentifier(), lastLoginIp);
         }
+        System.out.println(subject.hasRole("root"));
         return msg;
     }
 

@@ -48,7 +48,7 @@ public class UserAuths extends BaseUserAuths<UserAuths> {
     public boolean isUserExists(String identifier) {
         String sql = "select * from edu_user_auths where identityType = ? and identifier = ? ";
         String identifyType = FormatCheckUtils.identifierType(identifier);
-        List<Record> userAuths = Db.find(sql, identifyType, identifier);
+        List<UserAuths> userAuths = find(sql, identifyType, identifier);
         if (userAuths != null && userAuths.size() != 0) {
             return true;
         }
@@ -65,9 +65,9 @@ public class UserAuths extends BaseUserAuths<UserAuths> {
         int id = -1;
         String sql = "select * from edu_user_auths where identityType = ? and identifier = ? ";
         String identifyType = FormatCheckUtils.identifierType(identifier);
-        List<Record> userAuths = Db.find(sql, identifyType, identifier);
+        List<UserAuths> userAuths = find(sql, identifyType, identifier);
         if (userAuths != null && userAuths.size() != 0) {
-            id = userAuths.get(0).getInt("userId");
+            id = userAuths.get(0).getUserId();
         }
         return id;
     }

@@ -33,7 +33,7 @@ public class UserController extends Controller {
                 resultUtils = new ResultUtils(false, msg, null);
             }
         } else {
-            String msg = "未知错误";
+            String msg = "请传入登陆IP";
             resultUtils = new ResultUtils(false, msg, null);
         }
         renderJson(resultUtils);

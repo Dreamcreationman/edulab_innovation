@@ -1,6 +1,8 @@
 package com.edulab.model;
 
 import com.edulab.model_base.BaseUserRole;
+import com.jfinal.plugin.activerecord.Db;
+import com.jfinal.plugin.activerecord.Record;
 
 import java.util.HashSet;
 import java.util.Iterator;
@@ -22,10 +24,10 @@ public class UserRole extends BaseUserRole<UserRole> {
 	 */
 	public Set<String> getRolesById(int userId){
         Set<String> roles = new HashSet();
-        String sql = "select roleId from edu_user_role where userId = "+userId;
-        List<UserRole> roleAll = UserRole.dao.find(sql);
+        String sql = "select roleId from edu_user_role where userId = ?";
+        List<Record> roleAll = Db.find(sql,userId);
         for (int i =0; i <roleAll.size();i++){
-        	String roleName = Role.dao.getRoleNameById(roleAll.get(i).getRoleId());
+        	String roleName = Role.dao.getRoleNameById(roleAll.get(i).getInt("roleId"));
         	if (roleName != null)
         		roles.add(roleName);
         }

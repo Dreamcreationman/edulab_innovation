@@ -1,6 +1,7 @@
 package com.edulab.config;
 
 import com.edulab.controller.user.UserController;
+import com.edulab.model._MappingKit;
 import com.jfinal.config.*;
 import com.jfinal.core.JFinal;
 import com.jfinal.kit.PropKit;
@@ -42,6 +43,7 @@ public class MainConfig extends JFinalConfig {
         plugins.add(druidPlugin);
 
         ActiveRecordPlugin recordPlugin = new ActiveRecordPlugin(druidPlugin);
+        _MappingKit.mapping(recordPlugin);
         plugins.add(recordPlugin);
     }
 
