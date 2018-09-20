@@ -22,6 +22,6 @@ public class Role extends BaseRole<Role> {
 	public String getRoleNameById(int roleId){
         String sqlRole = "select roleName from edu_role where roleId = ?";
         List<Role> role = find(sqlRole,roleId);
-        return role.get(0).getRoleName();
+        return role.size()==0?null:role.get(0).getRoleName();
     }
 }

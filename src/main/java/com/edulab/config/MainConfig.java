@@ -16,8 +16,6 @@ import com.jfinal.template.Engine;
  */
 public class MainConfig extends JFinalConfig {
 
-    Engine engine;
-
     public static void main(String[] args) {
 
         JFinal.start("src/main/webapp", 8080, "/");
@@ -36,7 +34,7 @@ public class MainConfig extends JFinalConfig {
     }
 
     public void configEngine(Engine engine) {
-        this.engine = engine;
+
     }
 
     public void configPlugin(Plugins plugins) {

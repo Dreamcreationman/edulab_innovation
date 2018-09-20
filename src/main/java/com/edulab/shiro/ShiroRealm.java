@@ -1,5 +1,7 @@
 package com.edulab.shiro;
 
+import com.edulab.model.Right;
+import com.edulab.model.RoleRight;
 import com.edulab.model.UserAuths;
 import com.edulab.model.UserRole;
 import org.apache.shiro.authc.*;
@@ -28,13 +30,20 @@ public class ShiroRealm extends AuthorizingRealm {
         return "shiroRealm";
     }
 
+    /**
+     * 处理授权信息
+     * @param principalCollection
+     * @return
+     */
     protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principalCollection) {
         String identifier = (String) principalCollection.getPrimaryPrincipal();
         int id = UserAuths.dao.getIdByIdentifier(identifier);
         Set<String> roles = UserRole.dao.getRolesById(id);
+        Set<String> authorities = RoleRight.dao.getRightsById(id);
         SimpleAuthorizationInfo simpleAuthorizationInfo =
                 new SimpleAuthorizationInfo();
         simpleAuthorizationInfo.setRoles(roles);
+        simpleAuthorizationInfo.setStringPermissions(authorities);
         return simpleAuthorizationInfo;
     }
 
