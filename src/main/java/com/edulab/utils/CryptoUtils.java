@@ -3,10 +3,10 @@ package com.edulab.utils;
 import org.apache.commons.codec.binary.Base64;
 
 /**
- * CREATED BY Dream
+ * CREATED BY Yank
  * DATE : 2018/8/28
  * MAIL : YANK.TENYOND@GMAIL.COM
- * FUNCTION :
+ * FUNCTION : Hash utils for key info crypto
  */
 public class CryptoUtils {
     private static int saltSize = 32;
