@@ -9,40 +9,13 @@ import com.jfinal.plugin.activerecord.IBean;
 @SuppressWarnings({"serial", "unchecked"})
 public abstract class BaseUser<M extends BaseUser<M>> extends Model<M> implements IBean {
 
-	public M setId(java.lang.Long id) {
-		set("id", id);
+	public M setUserId(java.lang.Long userId) {
+		set("user_id", userId);
 		return (M)this;
 	}
 	
-	public java.lang.Long getId() {
-		return getLong("id");
-	}
-
-	public M setNickName(java.lang.String nickName) {
-		set("nickName", nickName);
-		return (M)this;
-	}
-	
-	public java.lang.String getNickName() {
-		return getStr("nickName");
-	}
-
-	public M setRealName(java.lang.String realName) {
-		set("realName", realName);
-		return (M)this;
-	}
-	
-	public java.lang.String getRealName() {
-		return getStr("realName");
-	}
-
-	public M setSignature(java.lang.String signature) {
-		set("signature", signature);
-		return (M)this;
-	}
-	
-	public java.lang.String getSignature() {
-		return getStr("signature");
+	public java.lang.Long getUserId() {
+		return getLong("user_id");
 	}
 
 	public M setAvatar(java.lang.String avatar) {
@@ -54,13 +27,22 @@ public abstract class BaseUser<M extends BaseUser<M>> extends Model<M> implement
 		return getStr("avatar");
 	}
 
-	public M setSex(java.lang.Boolean sex) {
-		set("sex", sex);
+	public M setRealname(java.lang.String realname) {
+		set("realname", realname);
 		return (M)this;
 	}
 	
-	public java.lang.Boolean getSex() {
-		return get("sex");
+	public java.lang.String getRealname() {
+		return getStr("realname");
+	}
+
+	public M setMotto(java.lang.String motto) {
+		set("motto", motto);
+		return (M)this;
+	}
+	
+	public java.lang.String getMotto() {
+		return getStr("motto");
 	}
 
 	public M setBirth(java.util.Date birth) {
@@ -72,76 +54,121 @@ public abstract class BaseUser<M extends BaseUser<M>> extends Model<M> implement
 		return get("birth");
 	}
 
-	public M setAge(java.lang.Long age) {
-		set("age", age);
+	public M setGender(java.lang.Integer gender) {
+		set("gender", gender);
 		return (M)this;
 	}
 	
-	public java.lang.Long getAge() {
-		return getLong("age");
+	public java.lang.Integer getGender() {
+		return getInt("gender");
 	}
 
-	public M setAddress(java.lang.String address) {
-		set("address", address);
+	public M setCountry(java.lang.String country) {
+		set("country", country);
 		return (M)this;
 	}
 	
-	public java.lang.String getAddress() {
-		return getStr("address");
+	public java.lang.String getCountry() {
+		return getStr("country");
 	}
 
-	public M setRegisterTime(java.util.Date registerTime) {
-		set("registerTime", registerTime);
+	public M setProvince(java.lang.String province) {
+		set("province", province);
 		return (M)this;
 	}
 	
-	public java.util.Date getRegisterTime() {
-		return get("registerTime");
+	public java.lang.String getProvince() {
+		return getStr("province");
+	}
+
+	public M setCity(java.lang.String city) {
+		set("city", city);
+		return (M)this;
+	}
+	
+	public java.lang.String getCity() {
+		return getStr("city");
+	}
+
+	public M setAcademy(java.lang.String academy) {
+		set("academy", academy);
+		return (M)this;
+	}
+	
+	public java.lang.String getAcademy() {
+		return getStr("academy");
+	}
+
+	public M setClasses(java.lang.String classes) {
+		set("classes", classes);
+		return (M)this;
+	}
+	
+	public java.lang.String getClasses() {
+		return getStr("classes");
+	}
+
+	public M setBankcard(java.lang.String bankcard) {
+		set("bankcard", bankcard);
+		return (M)this;
+	}
+	
+	public java.lang.String getBankcard() {
+		return getStr("bankcard");
 	}
 
 	public M setRegisterIp(java.lang.String registerIp) {
-		set("registerIp", registerIp);
+		set("register_ip", registerIp);
 		return (M)this;
 	}
 	
 	public java.lang.String getRegisterIp() {
-		return getStr("registerIp");
+		return getStr("register_ip");
 	}
 
-	public M setLastLoginTime(java.util.Date lastLoginTime) {
-		set("lastLoginTime", lastLoginTime);
+	public M setRegisterTime(java.util.Date registerTime) {
+		set("register_time", registerTime);
 		return (M)this;
 	}
 	
-	public java.util.Date getLastLoginTime() {
-		return get("lastLoginTime");
+	public java.util.Date getRegisterTime() {
+		return get("register_time");
 	}
 
 	public M setLastLoginIp(java.lang.String lastLoginIp) {
-		set("lastLoginIp", lastLoginIp);
+		set("last_login_ip", lastLoginIp);
 		return (M)this;
 	}
 	
 	public java.lang.String getLastLoginIp() {
-		return getStr("lastLoginIp");
+		return getStr("last_login_ip");
+	}
+
+	public M setLastLoginTime(java.util.Date lastLoginTime) {
+		set("last_login_time", lastLoginTime);
+		return (M)this;
+	}
+	
+	public java.util.Date getLastLoginTime() {
+		return get("last_login_time");
 	}
 
 	public M setUpdateTime(java.util.Date updateTime) {
-		set("updateTime", updateTime);
+		set("update_time", updateTime);
 		return (M)this;
 	}
 	
 	public java.util.Date getUpdateTime() {
-		return get("updateTime");
+		return get("update_time");
 	}
 
-	public M setStatus(java.lang.Boolean status) {
+	public M setStatus(java.lang.Integer status) {
 		set("status", status);
 		return (M)this;
 	}
 	
-	public java.lang.Boolean getStatus() {
-		return get("status");
+	public java.lang.Integer getStatus() {
+		return getInt("status");
 	}
 
 }

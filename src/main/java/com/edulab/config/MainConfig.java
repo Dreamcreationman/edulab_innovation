@@ -33,7 +33,6 @@ public class MainConfig extends JFinalConfig {
 
     @Override
     public void configRoute(Routes routes) {
-        routes.setBaseViewPath("/view");
         routes.add(new UserRoutes());
     }
 

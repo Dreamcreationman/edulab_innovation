@@ -10,21 +10,21 @@ import com.jfinal.plugin.activerecord.IBean;
 public abstract class BaseRight<M extends BaseRight<M>> extends Model<M> implements IBean {
 
 	public M setRightId(java.lang.Long rightId) {
-		set("rightId", rightId);
+		set("right_id", rightId);
 		return (M)this;
 	}
 	
 	public java.lang.Long getRightId() {
-		return getLong("rightId");
+		return getLong("right_id");
 	}
 
 	public M setRightName(java.lang.String rightName) {
-		set("rightName", rightName);
+		set("right_name", rightName);
 		return (M)this;
 	}
 	
 	public java.lang.String getRightName() {
-		return getStr("rightName");
+		return getStr("right_name");
 	}
 
 	public M setDescription(java.lang.String description) {

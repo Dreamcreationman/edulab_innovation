@@ -1,6 +1,6 @@
 package com.edulab.controller.user;
 
-import com.edulab.model.UserAuths;
+import com.edulab.model.UserAuth;
 import com.edulab.shiro.ShiroCredentialMatcher;
 import com.edulab.shiro.ShiroRealm;
 import com.edulab.utils.CryptoUtils;
@@ -44,18 +44,18 @@ public class UserService {
      * 将用户写入登录表和基本信息表
      *
      * @param registerIp 注册ip
-     * @param auths      注册信息
+     * @param auth      注册信息
      */
-    public void getUserRegister(String registerIp, UserAuths auths) {
+    public void getUserRegister(String registerIp, UserAuth auth) {
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         String updateTime = dateFormat.format(new Date());
         Record user = new Record().set("updateTime", updateTime).set("registerTime", updateTime).set("status", 0).set("registerIp", registerIp);
         Db.save("edu_user", user);
 
         String salt = CryptoUtils.getSalt();
-        String credential = CryptoUtils.getHash(auths.getCredential(), salt);
+        String credential = CryptoUtils.getHash(auth.getCredential(), salt);
         Record userAuth = new Record().set("userId", user.get("id")).set("identityType", "username").set("insideLogin", 0)
-                .set("identifier", auths.getIdentifier()).set("salt", salt).set("credential", credential);
+                .set("identifier", auth.getIdentifier()).set("salt", salt).set("credential", credential);
         Db.save("edu_user_auths", userAuth);
     }
 
@@ -63,10 +63,10 @@ public class UserService {
     /**
      * 执行登录
      *
-     * @param userAuths
+     * @param userAuth
      * @return
      */
-    public String checkLogin(UserAuths userAuths, String lastLoginIp) {
+    public String checkLogin(UserAuth userAuth, String lastLoginIp) {
         String msg = "登录成功";
         ShiroRealm shiroRealm = new ShiroRealm();
         DefaultSecurityManager defaultSecurityManager = new DefaultSecurityManager();
@@ -74,7 +74,7 @@ public class UserService {
         defaultSecurityManager.setRealm(shiroRealm);
         SecurityUtils.setSecurityManager(defaultSecurityManager);
         Subject subject = SecurityUtils.getSubject();
-        UsernamePasswordToken token = new UsernamePasswordToken(userAuths.getIdentifier(), userAuths.getCredential());
+        UsernamePasswordToken token = new UsernamePasswordToken(userAuth.getIdentifier(), userAuth.getCredential());
         try {
             subject.login(token);
         } catch (ExpiredCredentialsException e) {
@@ -89,7 +89,7 @@ public class UserService {
             msg = "未找到此用户，请检查您的用户名";
         }
         if (msg.equals("登录成功")) {
-            updateLoginSuccess(userAuths.getIdentifier(), lastLoginIp);
+            updateLoginSuccess(userAuth.getIdentifier(), lastLoginIp);
         }
         System.out.println(subject.hasRole("root"));
         return msg;
@@ -104,7 +104,7 @@ public class UserService {
     private void updateLoginSuccess(String identifier, String lastLoginIp) {
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         String updateTime = dateFormat.format(new Date());
-        Record user = Db.findById("edu_user", UserAuths.dao.getIdByIdentifier(identifier)).set("lastLoginTime", updateTime).set("lastLoginIp", lastLoginIp);
+        Record user = Db.findById("edu_user", UserAuth.dao.getIdByIdentifier(identifier)).set("lastLoginTime", updateTime).set("lastLoginIp", lastLoginIp);
         Db.update("edu_user", user);
     }
 

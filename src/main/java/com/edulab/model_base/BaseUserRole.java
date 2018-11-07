@@ -19,21 +19,21 @@ public abstract class BaseUserRole<M extends BaseUserRole<M>> extends Model<M> i
 	}
 
 	public M setUserId(java.lang.Integer userId) {
-		set("userId", userId);
+		set("user_id", userId);
 		return (M)this;
 	}
 	
 	public java.lang.Integer getUserId() {
-		return getInt("userId");
+		return getInt("user_id");
 	}
 
 	public M setRoleId(java.lang.Integer roleId) {
-		set("roleId", roleId);
+		set("role_id", roleId);
 		return (M)this;
 	}
 	
 	public java.lang.Integer getRoleId() {
-		return getInt("roleId");
+		return getInt("role_id");
 	}
 
 }

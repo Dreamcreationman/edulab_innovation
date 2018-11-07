@@ -10,30 +10,30 @@ import com.jfinal.plugin.activerecord.IBean;
 public abstract class BaseRole<M extends BaseRole<M>> extends Model<M> implements IBean {
 
 	public M setRoleId(java.lang.Long roleId) {
-		set("roleId", roleId);
+		set("role_id", roleId);
 		return (M)this;
 	}
 	
 	public java.lang.Long getRoleId() {
-		return getLong("roleId");
+		return getLong("role_id");
 	}
 
 	public M setRoleName(java.lang.String roleName) {
-		set("roleName", roleName);
+		set("role_name", roleName);
 		return (M)this;
 	}
 	
 	public java.lang.String getRoleName() {
-		return getStr("roleName");
+		return getStr("role_name");
 	}
 
 	public M setGenTime(java.util.Date genTime) {
-		set("genTime", genTime);
+		set("gen_time", genTime);
 		return (M)this;
 	}
 	
 	public java.util.Date getGenTime() {
-		return get("genTime");
+		return get("gen_time");
 	}
 
 	public M setDescription(java.lang.String description) {

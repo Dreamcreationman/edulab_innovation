@@ -13,6 +13,7 @@ public class UserRoutes extends Routes {
 
     @Override
     public void config() {
-        add("/user", UserController.class);
+        setBaseViewPath("/view/user");
+        add("/user", UserController.class,"/");
     }
 }

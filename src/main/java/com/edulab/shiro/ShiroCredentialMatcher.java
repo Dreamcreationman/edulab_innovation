@@ -1,6 +1,6 @@
 package com.edulab.shiro;
 
-import com.edulab.model.UserAuths;
+import com.edulab.model.UserAuth;
 import com.edulab.utils.CryptoUtils;
 import org.apache.shiro.authc.AuthenticationInfo;
 import org.apache.shiro.authc.AuthenticationToken;
@@ -20,7 +20,7 @@ public class ShiroCredentialMatcher extends SimpleCredentialsMatcher {
         UsernamePasswordToken usernamePasswordToken = (UsernamePasswordToken) token;
         String identifier = String.valueOf(token.getPrincipal());
         Object realCredentials = getCredentials(info);
-        return CryptoUtils.verify(String.valueOf(realCredentials), String.valueOf(usernamePasswordToken.getPassword()), UserAuths.dao.getSaltSQL(identifier));
+        return CryptoUtils.verify(String.valueOf(realCredentials), String.valueOf(usernamePasswordToken.getPassword()), UserAuth.dao.getSaltSQL(identifier));
     }
 
 }

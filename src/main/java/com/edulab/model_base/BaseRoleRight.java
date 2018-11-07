@@ -19,30 +19,21 @@ public abstract class BaseRoleRight<M extends BaseRoleRight<M>> extends Model<M>
 	}
 
 	public M setRoleId(java.lang.Integer roleId) {
-		set("roleId", roleId);
+		set("role_id", roleId);
 		return (M)this;
 	}
 	
 	public java.lang.Integer getRoleId() {
-		return getInt("roleId");
+		return getInt("role_id");
 	}
 
 	public M setRightId(java.lang.Integer rightId) {
-		set("rightId", rightId);
+		set("right_id", rightId);
 		return (M)this;
 	}
 	
 	public java.lang.Integer getRightId() {
-		return getInt("rightId");
-	}
-
-	public M setRightType(java.lang.Long rightType) {
-		set("rightType", rightType);
-		return (M)this;
-	}
-	
-	public java.lang.Long getRightType() {
-		return getLong("rightType");
+		return getInt("right_id");
 	}
 
 }

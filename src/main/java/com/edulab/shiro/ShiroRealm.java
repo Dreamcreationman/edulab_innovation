@@ -1,9 +1,6 @@
 package com.edulab.shiro;
 
-import com.edulab.model.Right;
-import com.edulab.model.RoleRight;
-import com.edulab.model.UserAuths;
-import com.edulab.model.UserRole;
+import com.edulab.model.*;
 import org.apache.shiro.authc.*;
 import org.apache.shiro.authz.AuthorizationInfo;
 import org.apache.shiro.authz.SimpleAuthorizationInfo;
@@ -26,6 +23,7 @@ public class ShiroRealm extends AuthorizingRealm {
         setCredentialsMatcher(shiroCredentialMatcher);
     }
 
+    @Override
     public String getName() {
         return "shiroRealm";
     }
@@ -35,9 +33,10 @@ public class ShiroRealm extends AuthorizingRealm {
      * @param principalCollection
      * @return
      */
+    @Override
     protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principalCollection) {
         String identifier = (String) principalCollection.getPrimaryPrincipal();
-        int id = UserAuths.dao.getIdByIdentifier(identifier);
+        int id = UserAuth.dao.getIdByIdentifier(identifier);
         Set<String> roles = UserRole.dao.getRolesById(id);
         Set<String> authorities = RoleRight.dao.getRightsById(id);
         SimpleAuthorizationInfo simpleAuthorizationInfo =
@@ -54,16 +53,18 @@ public class ShiroRealm extends AuthorizingRealm {
      * @return
      * @throws AuthenticationException
      */
+    @Override
     protected AuthenticationInfo doGetAuthenticationInfo(AuthenticationToken authenticationToken) throws AuthenticationException {
         UsernamePasswordToken token = (UsernamePasswordToken) authenticationToken;
         String identifier = (String) token.getPrincipal();
 
-        if (UserAuths.dao.isUserExists(identifier)) {
-            String credentialSql = UserAuths.dao.getSaltedCredential(identifier);
+        if (UserAuth.dao.isUserExists(identifier)) {
+            String credentialSql = UserAuth.dao.getSaltedCredential(identifier);
             SimpleAuthenticationInfo info = new SimpleAuthenticationInfo(identifier, credentialSql, getName());
             return info;
-        } else
+        } else{
             return null;
+        }
 
     }
 
