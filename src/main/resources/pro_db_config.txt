@@ -1,0 +1,4 @@
+jdbcURL = jdbc:mysql://localhost/edulab_innovation?characterEncoding=utf8&zeroDateTimeBehavior=convertToNull
+username = root
+password = root
+devMode = true

@@ -17,7 +17,7 @@ public class Right extends BaseRight<Right> {
      * @return null表示ID找不到对应的权限，需要检查ID是否正确
      */
 	public String getRightNameById(int rightId){
-        String sqlRight = "select rightName from edu_right where rightId = ?";
+        String sqlRight = "select right_name from edu_right where right_id = ?";
         List<Right> right = find(sqlRight,rightId);
         return right.size()==0?null:right.get(0).getRightName();
     }

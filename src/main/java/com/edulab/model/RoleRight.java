@@ -21,15 +21,16 @@ public class RoleRight extends BaseRoleRight<RoleRight> {
      */
     public Set<String> getRightsById(int userId){
         Set<String> rights = new HashSet();
-        String sql = "select roleId from edu_user_role where userId = ?";
+        String sql = "select role_id from edu_user_role where user_id = ?";
         List<UserRole> roleAll = UserRole.dao.find(sql,userId);
         for (int i =0; i <roleAll.size();i++){
             int roleId = roleAll.get(i).getRoleId();
             if (roleId != -1){
                 int rightId = getRightIdByRoleId(roleId);
                 String rightName = Right.dao.getRightNameById(rightId);
-                if (rightName != null)
+                if (rightName != null){
                     rights.add(rightName);
+                }
             }
         }
         return rights;
@@ -41,7 +42,7 @@ public class RoleRight extends BaseRoleRight<RoleRight> {
      * @return -1表示不存在此角色对应的权限
      */
     public int getRightIdByRoleId(int roleId){
-        String sql = "select rightId from edu_role_right where roleId = ?";
+        String sql = "select right_id from edu_role_right where role_id = ?";
         RoleRight roleRights = findFirst(sql,roleId);
         return roleRights==null?-1:roleRights.getRightId();
     }

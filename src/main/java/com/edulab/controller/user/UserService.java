@@ -1,5 +1,6 @@
 package com.edulab.controller.user;
 
+import com.edulab.model.User;
 import com.edulab.model.UserAuth;
 import com.edulab.shiro.ShiroCredentialMatcher;
 import com.edulab.shiro.ShiroRealm;
@@ -16,10 +17,10 @@ import java.util.Date;
 import java.util.List;
 
 /**
- * CREATED BY Dream
+ * CREATED BY Yank
  * DATE : 2018/8/27
  * MAIL : YANK.TENYOND@GMAIL.COM
- * FUNCTION :
+ * FUNCTION : User controller logic code implementation
  */
 public class UserService {
 
@@ -33,7 +34,7 @@ public class UserService {
      */
     public boolean isUniqueUsername(String username) {
         System.out.println(username);
-        List<Record> users = Db.find("select * from edu_user_auths where identifier = ?", username);
+        List<User> users = User.dao.find("select * from edu_user_auth where identifier = ?", username);
         if (users.size() != 0) {
             return false;
         }
@@ -43,20 +44,17 @@ public class UserService {
     /**
      * 将用户写入登录表和基本信息表
      *
-     * @param registerIp 注册ip
-     * @param auth      注册信息
+     * @param auth      注册安全信息
+     * @param user      注册基本信息
      */
-    public void getUserRegister(String registerIp, UserAuth auth) {
+    public void getUserRegister(UserAuth auth, User user) {
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         String updateTime = dateFormat.format(new Date());
-        Record user = new Record().set("updateTime", updateTime).set("registerTime", updateTime).set("status", 0).set("registerIp", registerIp);
-        Db.save("edu_user", user);
+        user.set("update_time", updateTime).set("register_time", updateTime).set("status", 0).save();
 
         String salt = CryptoUtils.getSalt();
         String credential = CryptoUtils.getHash(auth.getCredential(), salt);
-        Record userAuth = new Record().set("userId", user.get("id")).set("identityType", "username").set("insideLogin", 0)
-                .set("identifier", auth.getIdentifier()).set("salt", salt).set("credential", credential);
-        Db.save("edu_user_auths", userAuth);
+        auth.set("user_id", user.getUserId()).set("identity_type", "username").set("inside_login", 0).set("salt", salt).set("credential", credential).save();
     }
 
 
@@ -91,12 +89,11 @@ public class UserService {
         if (msg.equals("登录成功")) {
             updateLoginSuccess(userAuth.getIdentifier(), lastLoginIp);
         }
-        System.out.println(subject.hasRole("root"));
         return msg;
     }
 
     /**
-     * 更新最后登录的时间和IP，时间自己获取当前时间
+     * 更新最后登录的时间和IP，时间获取当前时间
      *
      * @param identifier
      * @param lastLoginIp 传入登录的IP
@@ -104,8 +101,8 @@ public class UserService {
     private void updateLoginSuccess(String identifier, String lastLoginIp) {
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         String updateTime = dateFormat.format(new Date());
-        Record user = Db.findById("edu_user", UserAuth.dao.getIdByIdentifier(identifier)).set("lastLoginTime", updateTime).set("lastLoginIp", lastLoginIp);
-        Db.update("edu_user", user);
+        User user = User.dao.findById(UserAuth.dao.getIdByIdentifier(identifier)).set("last_login_time", updateTime).set("last_login_ip", lastLoginIp);
+        user.update();
     }
 
 }

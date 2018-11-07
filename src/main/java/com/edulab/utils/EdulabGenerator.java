@@ -7,6 +7,8 @@ import com.jfinal.plugin.druid.DruidPlugin;
 
 import javax.sql.DataSource;
 
+import static com.edulab.utils.DBHelper.getDataSource;
+
 
 /**
  * CREATED BY Yank
@@ -15,13 +17,6 @@ import javax.sql.DataSource;
  * FUNCTION : Generate model file and base model, and automatically add mapping to _MappingKit
  */
 public class EdulabGenerator {
-
-    public static DataSource getDataSource() {
-        PropKit.use("db.txt");
-        DruidPlugin druidPlugin = new DruidPlugin(PropKit.use("db.txt").get("jdbcUrl"), PropKit.use("db.txt").get("username"), PropKit.use("db.txt").get("password"));
-        druidPlugin.start();
-        return druidPlugin.getDataSource();
-    }
 
     public static void main(String[] args) {
         // base model 所使用的包名

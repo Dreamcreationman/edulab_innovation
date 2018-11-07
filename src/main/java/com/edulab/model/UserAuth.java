@@ -21,7 +21,7 @@ public class UserAuth extends BaseUserAuth<UserAuth> {
      * @return
      */
     public String getSaltedCredential(String identifier) {
-        String sql = "select * from edu_user_auths where identityType = ? and identifier = ? ";
+        String sql = "select * from edu_user_auth where identity_type = ? and identifier = ? ";
         return Db.findFirst(sql, FormatCheckUtils.identifierType(identifier), identifier).getStr("credential");
     }
 
@@ -32,7 +32,7 @@ public class UserAuth extends BaseUserAuth<UserAuth> {
      * @return
      */
     public String getSaltSQL(String identifier) {
-        String sql = "select * from edu_user_auths where identityType = ? and identifier = ? ";
+        String sql = "select * from edu_user_auth where identity_type = ? and identifier = ? ";
         return Db.findFirst(sql, FormatCheckUtils.identifierType(identifier), identifier).getStr("salt");
     }
 
@@ -43,7 +43,7 @@ public class UserAuth extends BaseUserAuth<UserAuth> {
      * @return
      */
     public boolean isUserExists(String identifier) {
-        String sql = "select * from edu_user_auths where identityType = ? and identifier = ? ";
+        String sql = "select * from edu_user_auth where identity_type = ? and identifier = ? ";
         String identifyType = FormatCheckUtils.identifierType(identifier);
         List<UserAuth> userAuth = find(sql, identifyType, identifier);
         if (userAuth != null && userAuth.size() != 0) {
@@ -60,7 +60,7 @@ public class UserAuth extends BaseUserAuth<UserAuth> {
      */
     public int getIdByIdentifier(String identifier) {
         int id = -1;
-        String sql = "select * from edu_user_auths where identityType = ? and identifier = ? ";
+        String sql = "select * from edu_user_auth where identity_type = ? and identifier = ? ";
         String identifyType = FormatCheckUtils.identifierType(identifier);
         List<UserAuth> userAuth = find(sql, identifyType, identifier);
         if (userAuth != null && userAuth.size() != 0) {

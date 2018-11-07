@@ -1,15 +1,16 @@
 package com.edulab.controller.user;
 
+import com.edulab.model.User;
 import com.edulab.model.UserAuth;
 import com.edulab.utils.ResultUtils;
 import com.jfinal.core.ActionKey;
 import com.jfinal.core.Controller;
 
 /**
- * CREATED BY Dream
+ * CREATED BY Yank
  * DATE : 2018/8/27
  * MAIL : YANK.TENYOND@GMAIL.COM
- * FUNCTION :
+ * FUNCTION : base user action controller
  */
 public class UserController extends Controller {
 
@@ -21,7 +22,7 @@ public class UserController extends Controller {
         render("login/index.html");
     }
 
-    @ActionKey("/loginAuth")
+    @ActionKey("/login_auth")
     public void loginAuth() {
         UserAuth userAuth = getBean(UserAuth.class);
         String loginIp = getPara("loginIp");
@@ -44,12 +45,12 @@ public class UserController extends Controller {
         render("register/index.html");
     }
 
-    @ActionKey("/registerAuth")
+    @ActionKey("/register_auth")
     public void registerAuth() {
+        User user = getBean(User.class);
         UserAuth userAuth = getBean(UserAuth.class);
         if (service.isUniqueUsername(userAuth.getIdentifier())) {
-            String registerIp = getPara("registerIp");
-            service.getUserRegister(registerIp, userAuth);
+            service.getUserRegister(userAuth, user);
             resultUtils = new ResultUtils(true, "注册成功", null);
         } else {
             resultUtils = new ResultUtils(false, "用户名已被使用", null);

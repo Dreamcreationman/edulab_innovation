@@ -1,6 +1,5 @@
 package com.edulab.config;
 
-import com.edulab.controller.user.UserController;
 import com.edulab.model._MappingKit;
 import com.edulab.routes.UserRoutes;
 import com.jfinal.config.*;
@@ -9,6 +8,9 @@ import com.jfinal.kit.PropKit;
 import com.jfinal.plugin.activerecord.ActiveRecordPlugin;
 import com.jfinal.plugin.druid.DruidPlugin;
 import com.jfinal.template.Engine;
+
+import static com.edulab.utils.DBHelper.createDruidPlugin;
+import static com.yank.utils.ConfigUtils.loadProp;
 
 /**
  * CREATED BY Yank
@@ -20,13 +22,13 @@ public class MainConfig extends JFinalConfig {
 
     public static void main(String[] args) {
 
-        JFinal.start("src/main/webapp", 8080, "/");
+        JFinal.start("src/main/webapp", 8088, "/");
 
     }
 
     @Override
     public void configConstant(Constants constants) {
-        PropKit.use("project_config.txt");
+        loadProp("pro_db_config.txt", "dev_db_config.txt");
         constants.setBaseUploadPath("/uploadFile");
         constants.setDevMode(PropKit.getBoolean("devMode"));
     }
@@ -43,7 +45,7 @@ public class MainConfig extends JFinalConfig {
 
     @Override
     public void configPlugin(Plugins plugins) {
-        DruidPlugin druidPlugin = new DruidPlugin(PropKit.use("db.txt").get("jdbcUrl"), PropKit.use("db.txt").get("username"), PropKit.use("db.txt").get("password"));
+        DruidPlugin druidPlugin = createDruidPlugin();
         plugins.add(druidPlugin);
 
         ActiveRecordPlugin recordPlugin = new ActiveRecordPlugin(druidPlugin);

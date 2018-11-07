@@ -54,13 +54,13 @@ public abstract class BaseUser<M extends BaseUser<M>> extends Model<M> implement
 		return get("birth");
 	}
 
-	public M setGender(java.lang.Integer gender) {
+	public M setGender(java.lang.Boolean gender) {
 		set("gender", gender);
 		return (M)this;
 	}
 	
-	public java.lang.Integer getGender() {
-		return getInt("gender");
+	public java.lang.Boolean getGender() {
+		return get("gender");
 	}
 
 	public M setCountry(java.lang.String country) {
@@ -162,13 +162,13 @@ public abstract class BaseUser<M extends BaseUser<M>> extends Model<M> implement
 		return get("update_time");
 	}
 
-	public M setStatus(java.lang.Integer status) {
+	public M setStatus(java.lang.Boolean status) {
 		set("status", status);
 		return (M)this;
 	}
 	
-	public java.lang.Integer getStatus() {
-		return getInt("status");
+	public java.lang.Boolean getStatus() {
+		return get("status");
 	}
 
 }

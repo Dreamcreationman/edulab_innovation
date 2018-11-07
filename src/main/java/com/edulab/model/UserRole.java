@@ -24,12 +24,13 @@ public class UserRole extends BaseUserRole<UserRole> {
 	 */
 	public Set<String> getRolesById(int userId){
         Set<String> roles = new HashSet();
-        String sql = "select roleId from edu_user_role where userId = ?";
+        String sql = "select role_id from edu_user_role where user_id = ?";
         List<Record> roleAll = Db.find(sql,userId);
         for (int i =0; i <roleAll.size();i++){
-        	String roleName = Role.dao.getRoleNameById(roleAll.get(i).getInt("roleId"));
-        	if (roleName != null)
+        	String roleName = Role.dao.getRoleNameById(roleAll.get(i).getInt("role_id"));
+        	if (roleName != null){
         		roles.add(roleName);
+			}
         }
         return roles;
     }

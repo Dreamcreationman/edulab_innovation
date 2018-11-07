@@ -36,13 +36,13 @@ public abstract class BaseUserAuth<M extends BaseUserAuth<M>> extends Model<M> i
 		return getStr("identity_type");
 	}
 
-	public M setInsideLogin(java.lang.Integer insideLogin) {
+	public M setInsideLogin(java.lang.Boolean insideLogin) {
 		set("inside_login", insideLogin);
 		return (M)this;
 	}
 	
-	public java.lang.Integer getInsideLogin() {
-		return getInt("inside_login");
+	public java.lang.Boolean getInsideLogin() {
+		return get("inside_login");
 	}
 
 	public M setIdentifier(java.lang.String identifier) {

@@ -20,7 +20,7 @@ public class Role extends BaseRole<Role> {
      * @return
      */
 	public String getRoleNameById(int roleId){
-        String sqlRole = "select roleName from edu_role where roleId = ?";
+        String sqlRole = "select role_name from edu_role where role_id = ?";
         List<Role> role = find(sqlRole,roleId);
         return role.size()==0?null:role.get(0).getRoleName();
     }
