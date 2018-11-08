@@ -7,31 +7,36 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d01ce986-f14f-4f7c-8ed2-10e8a2d21817" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/edulab/utils/DBHelper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/edulab/interceptor/GlobalInterceptor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/html/user/register/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/edulab/config/MainConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/edulab/config/MainConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/edulab/controller/user/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/edulab/controller/user/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/edulab/controller/user/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/edulab/controller/user/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/edulab/model/Right.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/edulab/model/Right.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/edulab/model/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/edulab/model/Role.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/edulab/model/RoleRight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/edulab/model/RoleRight.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/edulab/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/edulab/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/edulab/model/UserAuth.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/edulab/model/UserAuth.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/edulab/model/UserRole.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/edulab/model/UserRole.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/edulab/model_base/BaseUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/edulab/model_base/BaseUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/edulab/model_base/BaseUserAuth.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/edulab/model_base/BaseUserAuth.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/edulab/utils/EdulabGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/edulab/utils/EdulabGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/db.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/pro_db_config.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/edulab/routes/UserRoutes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/edulab/routes/UserRoutes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/html/user/login/index.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/log/edulab_innovation.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/log/edulab_innovation.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/view/user/login/css/component.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/css/component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/view/user/login/css/demo.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/css/demo.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/view/user/login/css/normalize.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/css/normalize.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/view/user/login/img/demo-1-bg.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/img/demo-1-bg.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/view/user/login/img/login_ico.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/img/login_ico.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/view/user/login/js/EasePack.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/js/EasePack.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/view/user/login/js/TweenLite.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/js/TweenLite.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/view/user/login/js/demo-1.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/js/demo-1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/view/user/login/js/html5.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/js/html5.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/view/user/login/js/rAF.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/js/rAF.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/view/user/register/css/component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/view/user/register/css/demo.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/view/user/register/css/normalize.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/view/user/register/img/demo-1-bg.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/view/user/register/img/login_ico.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/view/user/register/js/EasePack.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/view/user/register/js/TweenLite.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/view/user/register/js/demo-1.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/view/user/register/js/html5.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/view/user/register/js/rAF.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/edulab/config/MainConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/edulab/config/MainConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/edulab/model/Right.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/edulab/model/Right.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/edulab/model/Role.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/edulab/model/Role.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/edulab/model/RoleRight.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/edulab/model/RoleRight.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/edulab/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/edulab/model/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/edulab/model/UserRole.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/edulab/model/UserRole.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/edulab/model_base/BaseUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/edulab/model_base/BaseUser.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/edulab/utils/EdulabGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/edulab/utils/EdulabGenerator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/db.txt" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -41,7 +46,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/edulabinnovation$MainConfig.ic" NAME="MainConfig Coverage Results" MODIFIED="1535649593269" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/edulabinnovation$MainConfig.ic" NAME="MainConfig Coverage Results" MODIFIED="1541687889850" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.edulab.config.*</FILTER>
     </SUITE>
   </component>
@@ -66,7 +71,7 @@
     <session id="2039915452">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="41" />
+          <entry key="project.closed" value="45" />
           <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.12" value="1" />
           <entry key="project.open.time.16" value="2" />
@@ -78,6 +83,7 @@
           <entry key="project.open.time.4" value="1" />
           <entry key="project.open.time.40" value="3" />
           <entry key="project.open.time.41" value="1" />
+          <entry key="project.open.time.42" value="1" />
           <entry key="project.open.time.43" value="1" />
           <entry key="project.open.time.45" value="4" />
           <entry key="project.open.time.46" value="1" />
@@ -85,7 +91,8 @@
           <entry key="project.open.time.49" value="3" />
           <entry key="project.open.time.50" value="1" />
           <entry key="project.open.time.51" value="4" />
-          <entry key="project.open.time.52" value="3" />
+          <entry key="project.open.time.52" value="4" />
+          <entry key="project.open.time.54" value="1" />
           <entry key="project.open.time.55" value="2" />
           <entry key="project.open.time.56" value="2" />
           <entry key="project.open.time.57" value="2" />
@@ -93,61 +100,64 @@
           <entry key="project.open.time.6" value="1" />
           <entry key="project.open.time.61" value="1" />
           <entry key="project.open.time.62" value="2" />
-          <entry key="project.open.time.65" value="1" />
+          <entry key="project.open.time.65" value="2" />
           <entry key="project.open.time.67" value="1" />
-          <entry key="project.opened" value="49" />
+          <entry key="project.open.time.69" value="1" />
+          <entry key="project.opened" value="54" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="214" />
+          <entry key="html" value="230" />
           <entry key="ini" value="311" />
-          <entry key="java" value="9865" />
+          <entry key="java" value="10351" />
           <entry key="properties" value="26" />
-          <entry key="txt" value="363" />
-          <entry key="xml" value="78" />
+          <entry key="txt" value="376" />
+          <entry key="xml" value="93" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="214" />
-          <entry key="JAVA" value="9865" />
-          <entry key="PLAIN_TEXT" value="674" />
+          <entry key="HTML" value="230" />
+          <entry key="JAVA" value="10351" />
+          <entry key="PLAIN_TEXT" value="687" />
           <entry key="Properties" value="26" />
-          <entry key="XML" value="78" />
+          <entry key="XML" value="93" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="0-SNAPSHOT" value="1" />
           <entry key="MF" value="1" />
-          <entry key="class" value="57" />
+          <entry key="class" value="91" />
           <entry key="config" value="1" />
           <entry key="css" value="1" />
           <entry key="fxml" value="1" />
-          <entry key="html" value="12" />
+          <entry key="html" value="17" />
           <entry key="ini" value="8" />
-          <entry key="java" value="268" />
+          <entry key="java" value="288" />
           <entry key="js" value="2" />
           <entry key="log" value="4" />
+          <entry key="png" value="1" />
           <entry key="properties" value="2" />
           <entry key="txt" value="13" />
-          <entry key="xml" value="35" />
+          <entry key="xml" value="37" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CLASS" value="57" />
+          <entry key="CLASS" value="91" />
           <entry key="CSS" value="1" />
-          <entry key="HTML" value="12" />
-          <entry key="JAVA" value="268" />
+          <entry key="HTML" value="17" />
+          <entry key="Image" value="1" />
+          <entry key="JAVA" value="288" />
           <entry key="JavaScript" value="2" />
           <entry key="Log" value="1" />
           <entry key="Manifest" value="1" />
           <entry key="PLAIN_TEXT" value="25" />
           <entry key="Properties" value="2" />
           <entry key="UML" value="1" />
-          <entry key="XML" value="36" />
+          <entry key="XML" value="38" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.spring.boot.mvc.usages" />
@@ -161,17 +171,12 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/edulab/config/MainConfig.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="70">
-              <caret line="24" column="49" selection-start-line="24" selection-start-column="49" selection-end-line="24" selection-end-column="49" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/edulab/utils/EdulabGenerator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-91">
-              <caret line="32" selection-start-line="32" selection-end-line="32" />
+            <state relative-caret-position="560">
+              <caret line="46" column="37" selection-start-line="46" selection-start-column="37" selection-end-line="46" selection-end-column="37" />
+              <folding>
+                <element signature="e#1412#1413#0" expanded="true" />
+                <element signature="e#1456#1457#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -179,44 +184,14 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/edulab/controller/user/UserController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="50">
-              <caret line="51" column="65" selection-start-line="51" selection-start-column="65" selection-end-line="51" selection-end-column="65" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/edulab/model_base/BaseUser.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-420">
-              <caret line="92" column="48" selection-start-line="92" selection-start-column="48" selection-end-line="92" selection-end-column="48" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/edulab/utils/ConfigUtils.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-8">
-              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="194">
-              <caret line="70" column="24" selection-start-line="70" selection-start-column="24" selection-end-line="70" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/edulab/utils/DBHelper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="359">
-              <caret line="31" column="59" selection-start-line="31" selection-start-column="59" selection-end-line="31" selection-end-column="59" />
+            <state relative-caret-position="-455">
+              <caret line="27" column="33" selection-start-line="27" selection-start-column="33" selection-end-line="27" selection-end-column="33" />
+              <folding>
+                <element signature="e#501#502#0" expanded="true" />
+                <element signature="e#544#545#0" expanded="true" />
+                <element signature="e#1198#1199#0" expanded="true" />
+                <element signature="e#1243#1244#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -260,7 +235,6 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/edulab/shiro/CommonAuthenticationToken.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/edulab/shiro/ShiroPlugin.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/view/user/login/index.html" />
         <option value="$PROJECT_DIR$/src/main/java/com/edulab/utils/ResultUtils.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/edulab/model_base/BaseUserRole.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/edulab/model_base/BaseRight.java" />
@@ -275,20 +249,22 @@
         <option value="$PROJECT_DIR$/src/main/java/com/edulab/model/UserAuths.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/edulab/shiro/ShiroRealm.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/edulab/shiro/ShiroCredentialMatcher.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/edulab/routes/UserRoutes.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/edulab/utils/EdulabGenerator.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/edulab/model/User.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/edulab/model/UserAuth.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/edulab/model/Right.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/edulab/model/Role.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/edulab/model/RoleRight.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/edulab/model/UserRole.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/edulab/utils/DBHelper.java" />
         <option value="$PROJECT_DIR$/src/main/resources/pro_db_config.txt" />
+        <option value="$PROJECT_DIR$/src/main/java/com/edulab/controller/user/UserService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/edulab/model/UserAuth.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/view/user/login/index.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/edulab/routes/UserRoutes.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/edulab/config/MainConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/edulab/interceptor/GlobalInterceptor.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/edulab/controller/user/UserController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/edulab/controller/user/UserService.java" />
       </list>
     </option>
   </component>
@@ -330,10 +306,9 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="262" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1100" />
+    <option name="x" value="-8" />
+    <option name="width" value="976" />
+    <option name="height" value="1088" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -343,7 +318,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -402,7 +376,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="edulab" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
+              <item name="interceptor" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="edulabinnovation" type="b2602c69:ProjectViewProjectNode" />
@@ -411,14 +385,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="edulab" type="462c0819:PsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="edulabinnovation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="edulabinnovation" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="routes" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="edulabinnovation" type="b2602c69:ProjectViewProjectNode" />
@@ -433,7 +400,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="view" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="edulabinnovation" type="b2602c69:ProjectViewProjectNode" />
@@ -441,7 +408,17 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="view" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="html" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="edulabinnovation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="edulabinnovation" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="html" type="462c0819:PsiDirectoryNode" />
               <item name="user" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -450,7 +427,19 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="view" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="html" type="462c0819:PsiDirectoryNode" />
+              <item name="user" type="462c0819:PsiDirectoryNode" />
+              <item name="login" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="edulabinnovation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="edulabinnovation" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="html" type="462c0819:PsiDirectoryNode" />
               <item name="user" type="462c0819:PsiDirectoryNode" />
               <item name="register" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -459,21 +448,27 @@
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SearchEverywhereHistoryKey" value="TemplateRender&#9;FILE&#9;jar://D:/Maven/LocalRespository/com/jfinal/jfinal/3.4/jfinal-3.4.jar!/com/jfinal/render/TemplateRender.class" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541613724722" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541691793798" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="web.server" />
+    <property name="settings.editor.selected.configurable" value="project.propCompiler" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.edulab.interceptor" />
+      <recent name="com.edulab.routes" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\JavaEE\IDEA\edulabinnovation\src\main\java\com\edulab\utils" />
       <recent name="E:\JavaEE\IDEA\edulabinnovation\src\main\webapp\view\user\register" />
@@ -484,8 +479,12 @@
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.edulab.model" />
     </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.edulab.routes" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\JavaEE\IDEA\edulabinnovation\src\main\webapp\WEB-INF\html\user\login" />
+      <recent name="E:\JavaEE\IDEA\edulabinnovation\src\main\webapp\WEB-INF\html\user\register" />
+      <recent name="E:\JavaEE\IDEA\edulabinnovation\src\main\webapp\WEB-INF\html\user" />
+      <recent name="E:\JavaEE\IDEA\edulabinnovation\src\main\webapp\WEB-INF" />
+      <recent name="E:\JavaEE\IDEA\edulabinnovation\src\main\webapp\static\js" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -682,7 +681,12 @@
       <workItem from="1541578552501" duration="3387000" />
       <workItem from="1541603766627" duration="973000" />
       <workItem from="1541605095172" duration="1756000" />
-      <workItem from="1541607424819" duration="6068000" />
+      <workItem from="1541607424819" duration="6998000" />
+      <workItem from="1541638444661" duration="2603000" />
+      <workItem from="1541651689306" duration="3822000" />
+      <workItem from="1541671812616" duration="3704000" />
+      <workItem from="1541687622135" duration="1176000" />
+      <workItem from="1541691156626" duration="657000" />
     </task>
     <task id="LOCAL-00001" summary="增加自定义鉴权">
       <created>1537468060899</created>
@@ -705,11 +709,18 @@
       <option name="project" value="LOCAL" />
       <updated>1541607510084</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="项目初步重构完成">
+      <created>1541613785033</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1541613785033</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="155419000" />
+    <option name="totallyTimeSpent" value="168311000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -722,9 +733,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17518637" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23614073" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -734,16 +744,16 @@
       <window_info id="Learn" order="7" />
       <window_info id="Web" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32953367" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49946752" visible="true" weight="0.3595855" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32946146" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946752" weight="0.40232313" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39915523" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32953367" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32946146" />
       <window_info anchor="bottom" id="Spring" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32953367" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32946146" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50106496" side_tool="true" weight="0.32953367" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.32953367" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.3284055" />
       <window_info anchor="bottom" id="Java Enterprise" order="11" weight="0.32953367" />
       <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="13" show_stripe_button="false" />
@@ -771,7 +781,8 @@
     <MESSAGE value="增加自定义鉴权" />
     <MESSAGE value="今天的熬夜很没意义，快要被自己蠢哭了，一直不能运行的dao模式是因为自己忘了在configPlugin()配置mappingkit了，我日，顺便把Id从long改成int" />
     <MESSAGE value="项目误删后第一次提交，借此机会重构下代码" />
-    <option name="LAST_COMMIT_MESSAGE" value="项目误删后第一次提交，借此机会重构下代码" />
+    <MESSAGE value="项目初步重构完成" />
+    <option name="LAST_COMMIT_MESSAGE" value="项目初步重构完成" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -790,153 +801,9 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/shiro/shiro-core/1.4.0/shiro-core-1.4.0.jar!/org/apache/shiro/authc/UsernamePasswordToken.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="117" selection-start-line="117" selection-end-line="117" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/shiro/shiro-core/1.4.0/shiro-core-1.4.0.jar!/org/apache/shiro/mgt/DefaultSecurityManager.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="158" selection-start-line="158" selection-end-line="158" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/shiro/shiro-core/1.4.0/shiro-core-1.4.0.jar!/org/apache/shiro/subject/Subject.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="58" column="9" selection-start-line="58" selection-start-column="9" selection-end-line="58" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/shiro/shiro-core/1.4.0/shiro-core-1.4.0.jar!/org/apache/shiro/authc/credential/SimpleCredentialsMatcher.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
-          <caret line="24" column="21" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/edulab/utils/ResultUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="32" column="5" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/shiro/shiro-core/1.4.0/shiro-core-1.4.0.jar!/org/apache/shiro/authc/AbstractAuthenticator.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="372">
-          <caret line="82" selection-start-line="82" selection-end-line="82" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/jfinal/jfinal/3.4/jfinal-3.4.jar!/com/jfinal/plugin/activerecord/Db.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="213" selection-start-line="213" selection-end-line="213" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/edulab/utils/FormatCheckUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="30" selection-start-line="30" selection-end-line="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/shiro/shiro-core/1.4.0/shiro-core-1.4.0.jar!/org/apache/shiro/subject/SimplePrincipalCollection.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="307">
-          <caret line="61" column="18" selection-start-line="61" selection-start-column="18" selection-end-line="61" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/shiro/shiro-core/1.4.0/shiro-core-1.4.0.jar!/org/apache/shiro/subject/PrincipalCollection.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="13" column="11" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/view/user/login/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="22" column="42" lean-forward="true" selection-start-line="22" selection-start-column="42" selection-end-line="22" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/jfinal/jfinal/3.4/jfinal-3.4.jar!/com/jfinal/kit/PropKit.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-805">
-          <caret line="11" column="12" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/edulab/model_base/BaseUserRole.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="17" column="22" lean-forward="true" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/view/user/register/js/html5.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/shiro.ini">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/edulab/model_base/BaseRole.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="17" column="22" lean-forward="true" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/edulab/model/Authen.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/edulab/model_base/BaseRoleRight.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="16" column="28" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/edulab/model/RoleAuthor.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/edulab/model/Author.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/edulab/utils/CryptoUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1925">
-          <caret line="8" column="44" selection-start-line="8" selection-start-column="44" selection-end-line="8" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/edulab/model_base/BaseRight.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="560">
-          <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/log4j.xml" />
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/applicationContext.xml" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/edulab/model_base/BaseUserAuths.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/edulab/model/UserAuths.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/edulab/shiro/ShiroRealm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1960">
-          <caret line="65" column="24" selection-start-line="65" selection-start-column="24" selection-end-line="65" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/edulab/model_base/BaseUserAuth.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="280">
@@ -958,16 +825,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/edulab/routes/UserRoutes.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="15" column="35" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/edulab/utils/Rfc2898DeriveBytes.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-805">
@@ -979,10 +836,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="307">
           <caret line="501" column="13" selection-start-line="501" selection-start-column="13" selection-end-line="501" selection-end-column="13" />
-          <folding>
-            <element signature="e#16869#16870#0" expanded="true" />
-            <element signature="e#16931#16932#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -990,13 +843,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="725">
           <caret line="31" column="36" selection-start-line="31" selection-start-column="36" selection-end-line="31" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/edulab/model/RoleRight.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1400">
-          <caret line="44" column="70" selection-start-line="44" selection-start-column="70" selection-end-line="44" selection-end-column="70" />
         </state>
       </provider>
     </entry>
@@ -1021,27 +867,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/edulab/utils/ConfigUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-8">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/edulab/utils/EdulabGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-91">
-          <caret line="32" selection-start-line="32" selection-end-line="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/edulab/utils/DBHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="359">
-          <caret line="31" column="59" selection-start-line="31" selection-start-column="59" selection-end-line="31" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/pro_db_config.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -1049,55 +874,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="70" column="24" selection-start-line="70" selection-start-column="24" selection-end-line="70" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/view/user/register/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="30" column="37" lean-forward="true" selection-start-line="30" selection-start-column="37" selection-end-line="30" selection-end-column="56" />
-          <folding>
-            <element signature="n#style#0;n#input#0;n#div#1;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/edulab/config/MainConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="70">
-          <caret line="24" column="49" selection-start-line="24" selection-start-column="49" selection-end-line="24" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/com/jfinal/jfinal/3.4/jfinal-3.4.jar!/com/jfinal/core/Controller.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="191">
           <caret line="109" column="18" selection-start-line="109" selection-start-column="18" selection-end-line="109" selection-end-column="18" />
-          <folding>
-            <element signature="e#3225#3226#0" expanded="true" />
-            <element signature="e#3279#3280#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/edulab/model_base/BaseUser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-420">
-          <caret line="92" column="48" selection-start-line="92" selection-start-column="48" selection-end-line="92" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/edulab/model/UserAuth.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="62" column="67" selection-start-line="62" selection-start-column="67" selection-end-line="62" selection-end-column="67" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1108,23 +888,260 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/edulab/utils/EdulabGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="875">
+          <caret line="32" selection-start-line="32" selection-end-line="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/edulab/utils/ConfigUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/edulab/model_base/BaseUser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="35">
+          <caret line="92" column="48" selection-start-line="92" selection-start-column="48" selection-end-line="92" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/edulab/controller/user/UserService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="684">
-          <caret line="45" column="6" lean-forward="true" selection-start-line="45" selection-start-column="6" selection-end-line="45" selection-end-column="6" />
+        <state relative-caret-position="184">
+          <caret line="76" selection-start-line="76" selection-end-line="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/edulab/shiro/ShiroRealm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="60" selection-start-line="60" selection-end-line="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/edulab/model/UserAuth.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="565">
+          <caret line="55" column="26" lean-forward="true" selection-start-line="55" selection-start-column="26" selection-end-line="55" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/edulab/utils/DBHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="411">
+          <caret line="31" column="59" selection-start-line="31" selection-start-column="59" selection-end-line="31" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/view/user/register/img/login_ico.png" />
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/html/user/login/index.html" />
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/html/user/register/index.html" />
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/html/user/login/login.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/html/user/register/index.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_172/src.zip!/java/lang/ClassLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="762" selection-start-line="762" selection-end-line="762" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_172/src.zip!/java/net/URLClassLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="212">
+          <caret line="361" selection-start-line="361" selection-end-line="361" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../jfinal_demo/WebRoot/WEB-INF/lib/jetty-server-8.1.8.jar!/org/eclipse/jetty/servlet/ServletContextHandler.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="209" selection-start-line="209" selection-end-line="209" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../jfinal_demo/WebRoot/WEB-INF/lib/jetty-server-8.1.8.jar!/org/eclipse/jetty/webapp/WebAppContext.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="809" selection-start-line="809" selection-end-line="809" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../jfinal_demo/WebRoot/WEB-INF/lib/jetty-server-8.1.8.jar!/org/eclipse/jetty/server/handler/ContextHandler.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="440" selection-start-line="440" selection-end-line="440" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/jfinal/jfinal/3.4/jfinal-3.4.jar!/com/jfinal/server/JettyServerForIDEA.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="50" selection-start-line="50" selection-end-line="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_172/src.zip!/java/util/List.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-67">
+          <caret line="237" column="14" selection-start-line="237" selection-start-column="14" selection-end-line="237" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/jfinal/jfinal/3.4/jfinal-3.4.jar!/com/jfinal/config/Routes.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="32" selection-start-line="32" selection-end-line="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/jfinal/jfinal/3.4/jfinal-3.4.jar!/com/jfinal/core/Config.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="51" selection-start-line="51" selection-end-line="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/jfinal/jfinal/3.4/jfinal-3.4.jar!/com/jfinal/core/JFinal.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="316">
+          <caret line="51" selection-start-line="51" selection-end-line="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/jfinal/jfinal/3.4/jfinal-3.4.jar!/com/jfinal/core/JFinalFilter.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="42" selection-start-line="42" selection-end-line="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../jfinal_demo/WebRoot/WEB-INF/lib/jetty-server-8.1.8.jar!/org/eclipse/jetty/servlet/ServletHandler.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="551" selection-start-line="551" selection-end-line="551" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../jfinal_demo/WebRoot/WEB-INF/lib/jetty-server-8.1.8.jar!/org/eclipse/jetty/util/component/AbstractLifeCycle.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="59" selection-start-line="59" selection-end-line="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../jfinal_demo/WebRoot/WEB-INF/lib/jetty-server-8.1.8.jar!/org/eclipse/jetty/servlet/FilterHolder.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="73" selection-start-line="73" selection-end-line="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/jfinal/jfinal/3.4/jfinal-3.4.jar!/com/jfinal/core/ControllerFactory.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/jfinal/jfinal/3.4/jfinal-3.4.jar!/com/jfinal/render/TemplateRender.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1085">
+          <caret line="43" selection-start-line="43" selection-end-line="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/edulab/model/RoleRight.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="945">
+          <caret line="31" column="27" selection-start-line="31" selection-start-column="27" selection-end-line="31" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/jfinal/jfinal/3.4/jfinal-3.4.jar!/com/jfinal/core/ActionHandler.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="71" selection-start-line="71" selection-end-line="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/jfinal/jfinal/3.4/jfinal-3.4.jar!/com/jfinal/template/source/FileSource.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="248">
+          <caret line="53" selection-start-line="53" selection-end-line="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="73" column="20" lean-forward="true" selection-start-line="73" selection-start-column="20" selection-end-line="73" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/edulab/interceptor/GlobalInterceptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="13" column="28" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
+          <folding>
+            <element signature="e#352#353#0" expanded="true" />
+            <element signature="e#377#378#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/edulab/routes/UserRoutes.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/edulab/config/MainConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="560">
+          <caret line="46" column="37" selection-start-line="46" selection-start-column="37" selection-end-line="46" selection-end-column="37" />
+          <folding>
+            <element signature="e#1412#1413#0" expanded="true" />
+            <element signature="e#1456#1457#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/edulab/controller/user/UserController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="51" column="65" selection-start-line="51" selection-start-column="65" selection-end-line="51" selection-end-column="65" />
+        <state relative-caret-position="-455">
+          <caret line="27" column="33" selection-start-line="27" selection-start-column="33" selection-end-line="27" selection-end-column="33" />
+          <folding>
+            <element signature="e#501#502#0" expanded="true" />
+            <element signature="e#544#545#0" expanded="true" />
+            <element signature="e#1198#1199#0" expanded="true" />
+            <element signature="e#1243#1244#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
   </component>
   <component name="masterDetails">
     <states>
+      <state key="ArquillianSettingsConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />

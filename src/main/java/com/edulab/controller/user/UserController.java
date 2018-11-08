@@ -19,7 +19,7 @@ public class UserController extends Controller {
 
     @ActionKey("/login")
     public void login() {
-        render("login/index.html");
+        render("/login/login.html");
     }
 
     @ActionKey("/login_auth")

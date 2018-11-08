@@ -1,13 +1,20 @@
 package com.edulab.config;
 
+import com.edulab.controller.user.UserController;
+import com.edulab.interceptor.GlobalInterceptor;
+import com.edulab.model.User;
 import com.edulab.model._MappingKit;
 import com.edulab.routes.UserRoutes;
 import com.jfinal.config.*;
 import com.jfinal.core.JFinal;
+import com.jfinal.ext.handler.ContextPathHandler;
+import com.jfinal.ext.interceptor.GET;
 import com.jfinal.kit.PropKit;
 import com.jfinal.plugin.activerecord.ActiveRecordPlugin;
 import com.jfinal.plugin.druid.DruidPlugin;
+import com.jfinal.render.ViewType;
 import com.jfinal.template.Engine;
+import org.omg.PortableInterceptor.INACTIVE;
 
 import static com.edulab.utils.DBHelper.createDruidPlugin;
 import static com.yank.utils.ConfigUtils.loadProp;
@@ -22,15 +29,17 @@ public class MainConfig extends JFinalConfig {
 
     public static void main(String[] args) {
 
-        JFinal.start("src/main/webapp", 8088, "/");
+        JFinal.start("src/main/webapp", 8888, "/");
 
     }
 
     @Override
     public void configConstant(Constants constants) {
         loadProp("pro_db_config.txt", "dev_db_config.txt");
+        constants.setViewType(ViewType.JFINAL_TEMPLATE);
         constants.setBaseUploadPath("/uploadFile");
-        constants.setDevMode(PropKit.getBoolean("devMode"));
+        constants.setEncoding("utf-8");
+        constants.setDevMode(PropKit.getBoolean("devMode", true));
     }
 
     @Override
@@ -55,10 +64,11 @@ public class MainConfig extends JFinalConfig {
 
     @Override
     public void configInterceptor(Interceptors interceptors) {
-
+        interceptors.addGlobalActionInterceptor(new GlobalInterceptor());
     }
 
     @Override
     public void configHandler(Handlers handlers) {
+        handlers.add(new ContextPathHandler("BASE_PATH"));
     }
 }
