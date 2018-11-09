@@ -1,12 +1,12 @@
 package com.edulab.utils;
 
 import com.jfinal.kit.PropKit;
-import com.jfinal.plugin.activerecord.generator.Generator;
 import com.jfinal.plugin.druid.DruidPlugin;
 
 import javax.sql.DataSource;
 
-import static com.yank.utils.ConfigUtils.loadProp;
+import static com.edulab.utils.ConfigUtils.loadProp;
+
 
 /**
  * CREATED BY Dream

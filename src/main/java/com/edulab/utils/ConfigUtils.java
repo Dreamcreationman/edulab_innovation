@@ -1,4 +1,4 @@
-package com.yank.utils;
+package com.edulab.utils;
 
 import com.jfinal.kit.PropKit;
 

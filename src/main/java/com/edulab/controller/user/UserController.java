@@ -2,6 +2,7 @@ package com.edulab.controller.user;
 
 import com.edulab.model.User;
 import com.edulab.model.UserAuth;
+import com.edulab.shiro.ShiroUtils;
 import com.edulab.utils.ResultUtils;
 import com.jfinal.core.ActionKey;
 import com.jfinal.core.Controller;
@@ -19,15 +20,21 @@ public class UserController extends Controller {
 
     @ActionKey("/login")
     public void login() {
-        render("/login/login.html");
+        //if user already login in, then, redirect to admin
+        if (ShiroUtils.getUserID() != -1L){
+            redirect("/admin");
+            return;
+        }
+        render("login/login.html");
     }
 
     @ActionKey("/login_auth")
     public void loginAuth() {
         UserAuth userAuth = getBean(UserAuth.class);
         String loginIp = getPara("loginIp");
+        boolean rememberMe = getParaToBoolean("rememberMe");
         if (loginIp != null) {
-            String msg = service.checkLogin(userAuth, loginIp);
+            String msg = service.checkLogin(userAuth, loginIp, rememberMe);
             if (msg.equals("登录成功")) {
                 resultUtils = new ResultUtils(true, msg, null);
             } else {
@@ -42,6 +49,10 @@ public class UserController extends Controller {
 
     @ActionKey("/register")
     public void register() {
+        if (ShiroUtils.getUserID() != -1L){
+            redirect("/admin");
+            return;
+        }
         render("register/index.html");
     }
 

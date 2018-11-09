@@ -25,6 +25,18 @@
     <packaging>war</packaging>
 
     <name>edulab-innovation</name>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>6</source>
+                    <target>6</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
     <groupId>com.edulab.edulab_innovation</groupId>
     <artifactId>edulab-innovation</artifactId>
     <version>1.0-SNAPSHOT</version>

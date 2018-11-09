@@ -8,10 +8,11 @@ import org.apache.shiro.authc.UsernamePasswordToken;
 import org.apache.shiro.authc.credential.SimpleCredentialsMatcher;
 
 /**
- * CREATED BY Dream
+ * CREATED BY Yank
  * DATE : 2018/8/31
  * MAIL : YANK.TENYOND@GMAIL.COM
- * FUNCTION :
+ * FUNCTION : Self-defined PasswordMatcher to match my own crypto for Hash based on
+ *            Rfc2898DeriveBytes. Details in package com.edulab.utils.Rfc2898DeriveBytes.java
  */
 public class ShiroCredentialMatcher extends SimpleCredentialsMatcher {
 

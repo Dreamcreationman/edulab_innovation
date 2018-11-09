@@ -1,23 +1,19 @@
 package com.edulab.config;
 
-import com.edulab.controller.user.UserController;
 import com.edulab.interceptor.GlobalInterceptor;
-import com.edulab.model.User;
 import com.edulab.model._MappingKit;
 import com.edulab.routes.UserRoutes;
 import com.jfinal.config.*;
 import com.jfinal.core.JFinal;
 import com.jfinal.ext.handler.ContextPathHandler;
-import com.jfinal.ext.interceptor.GET;
 import com.jfinal.kit.PropKit;
 import com.jfinal.plugin.activerecord.ActiveRecordPlugin;
 import com.jfinal.plugin.druid.DruidPlugin;
 import com.jfinal.render.ViewType;
 import com.jfinal.template.Engine;
-import org.omg.PortableInterceptor.INACTIVE;
 
+import static com.edulab.utils.ConfigUtils.loadProp;
 import static com.edulab.utils.DBHelper.createDruidPlugin;
-import static com.yank.utils.ConfigUtils.loadProp;
 
 /**
  * CREATED BY Yank
