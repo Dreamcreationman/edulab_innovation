@@ -21,29 +21,35 @@ public class UserController extends Controller {
     @ActionKey("/login")
     public void login() {
         //if user already login in, then, redirect to admin
-        if (ShiroUtils.getUserID() != -1L){
+        if (ShiroUtils.getUserID() != -1){
             redirect("/admin");
             return;
         }
-        render("login/login.html");
+        //return background image
+        setAttr("bgImg", "/upload/bg.png");
+        render("login/index.html");
     }
 
-    @ActionKey("/login_auth")
     public void loginAuth() {
+        String msg = "";
         UserAuth userAuth = getBean(UserAuth.class);
         String loginIp = getPara("loginIp");
-        boolean rememberMe = getParaToBoolean("rememberMe");
-        if (loginIp != null) {
-            String msg = service.checkLogin(userAuth, loginIp, rememberMe);
+        boolean rememberMe = getParaToBoolean("rememberMe", false);
+        if (userAuth.getIdentifier() == null || userAuth.getCredential() == null){
+            msg = "用户信息不能为空";
+            resultUtils = new ResultUtils(false, msg, null);
+        }else if (loginIp == null){
+            msg = "位置信息获取失败";
+            resultUtils = new ResultUtils(false, msg, null);
+        }else{
+            msg = service.checkLogin(userAuth, loginIp, rememberMe);
             if (msg.equals("登录成功")) {
                 resultUtils = new ResultUtils(true, msg, null);
             } else {
                 resultUtils = new ResultUtils(false, msg, null);
             }
-        } else {
-            String msg = "请传入登陆IP";
-            resultUtils = new ResultUtils(false, msg, null);
         }
+
         renderJson(resultUtils);
     }
 

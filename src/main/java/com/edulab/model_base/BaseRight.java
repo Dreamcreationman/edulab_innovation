@@ -9,13 +9,13 @@ import com.jfinal.plugin.activerecord.IBean;
 @SuppressWarnings({"serial", "unchecked"})
 public abstract class BaseRight<M extends BaseRight<M>> extends Model<M> implements IBean {
 
-	public M setRightId(java.lang.Long rightId) {
+	public M setRightId(java.lang.Integer rightId) {
 		set("right_id", rightId);
 		return (M)this;
 	}
 	
-	public java.lang.Long getRightId() {
-		return getLong("right_id");
+	public java.lang.Integer getRightId() {
+		return getInt("right_id");
 	}
 
 	public M setRightName(java.lang.String rightName) {

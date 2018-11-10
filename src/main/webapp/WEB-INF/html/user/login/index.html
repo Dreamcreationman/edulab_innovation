@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="#(BASE_PATH)/static/css/login.css"/>
+        <script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
+		<script type="text/javascript">
+            window.onload = function () {
+                document.getElementById("ip").value = returnCitySN["cip"];
+            }
+        </script>
+	</head>
+	<body style="background: url(#(bgImg)) no-repeat;">
+		<div class="bg1"></div>
+		<div class="gyl">
+		        Edulab后台管理系统
+		        
+		    <div class="gy2" >西南科技大学物联网应用技术创新实践班荣誉出品 </div>   
+		</div>
+		<form class="bg" action="/user/loginAuth" method="post">
+			<div class="wel">用户登录</div>			
+	        <div class="user">
+	       	    <div class="yonghu">用户名</div>
+	       	    <input  type="text" name="userAuth.identifier"  autofocus="true" />
+	        </div>
+	        <div class="password" >
+	        	<div class="yonghu">密&nbsp;&nbsp;&nbsp;码</div>
+	       	    <input class="" type="password" name="userAuth.credential" />
+	        </div>
+	        <div class="rem" >
+	       	  <input type="checkbox" name="rememberMe" value="" />
+	        	 <div id="reb">
+	        	 	记住密码
+	        	 </div>
+	        </div>
+			<input type="hidden" name="loginIp" id="ip" value="">
+	        <div class="fg" >
+	       	    <div style="font-size: 11px;margin-top: 11px;">
+	       	    	<a style="font-size: 11px;" href="#">忘记密码？</a>
+	       	    </div>
+	        </div>
+	        <input class="btn" type="submit" value="登录" />
+		</form>
+	</body>
+</html>

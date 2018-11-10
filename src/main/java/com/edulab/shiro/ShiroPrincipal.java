@@ -20,6 +20,9 @@ public class ShiroPrincipal implements Serializable {
     private List<String> roles = new ArrayList<String>();
     private List<String> authorities = new ArrayList<String>();
 
+    public  ShiroPrincipal(User user){
+        this.user = user;
+    }
     /**
      * 通过当前认证的主体设置字段判定是否认证，减少查库
      */
@@ -57,7 +60,12 @@ public class ShiroPrincipal implements Serializable {
         isAuthorized = authorized;
     }
 
-    public long getUserId(){
+    public int getUserId(){
         return this.user.getUserId();
+    }
+
+    @Override
+    public String toString() {
+        return this.user.get("realname");
     }
 }

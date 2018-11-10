@@ -18,7 +18,7 @@ public class ShiroUtils {
      */
     public static ShiroPrincipal getPrincipal(){
         Subject subject = SecurityUtils.getSubject();
-        return (ShiroPrincipal)subject.getPrincipal();
+        return (ShiroPrincipal)(subject.getPrincipal());
     }
 
     /**
@@ -33,11 +33,15 @@ public class ShiroUtils {
         return null;
     }
 
-    public static Long getUserID(){
-        User user = getUser();
-        if (user != null){
-            return user.getUserId();
+    /**
+     * judge id user is login by userID
+     * @return
+     */
+    public static int getUserID(){
+        ShiroPrincipal principal = getPrincipal();
+        if (principal != null){
+            return principal.getUserId();
         }
-        return -1L;
+        return -1;
     }
 }

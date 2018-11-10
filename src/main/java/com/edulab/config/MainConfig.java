@@ -33,7 +33,7 @@ public class MainConfig extends JFinalConfig {
     public void configConstant(Constants constants) {
         loadProp("pro_db_config.txt", "dev_db_config.txt");
         constants.setViewType(ViewType.JFINAL_TEMPLATE);
-        constants.setBaseUploadPath("/uploadFile");
+        constants.setBaseUploadPath("/upload");
         constants.setEncoding("utf-8");
         constants.setDevMode(PropKit.getBoolean("devMode", true));
     }
@@ -45,7 +45,7 @@ public class MainConfig extends JFinalConfig {
 
     @Override
     public void configEngine(Engine engine) {
-
+        engine.setDevMode(true);
     }
 
     @Override

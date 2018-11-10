@@ -13,6 +13,5 @@ public class AdminController extends Controller {
 
     @ActionKey("/admin")
     public void index(){
-
     }
 }

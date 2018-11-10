@@ -7,13 +7,15 @@ import org.apache.shiro.authz.SimpleAuthorizationInfo;
 import org.apache.shiro.realm.AuthorizingRealm;
 import org.apache.shiro.subject.PrincipalCollection;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Set;
 
 /**
- * CREATED BY Dream
+ * CREATED BY Yank
  * DATE : 2018/8/30
  * MAIL : YANK.TENYOND@GMAIL.COM
- * FUNCTION :
+ * FUNCTION : DBRealm for shiro
  */
 public class ShiroRealm extends AuthorizingRealm {
 
@@ -61,6 +63,13 @@ public class ShiroRealm extends AuthorizingRealm {
         if (UserAuth.dao.isUserExists(identifier)) {
             String credentialSql = UserAuth.dao.getSaltedCredential(identifier);
             SimpleAuthenticationInfo info = new SimpleAuthenticationInfo(identifier, credentialSql, getName());
+            ShiroPrincipal shiroPrincipal = new ShiroPrincipal(User.dao.getUserByUserID(UserAuth.dao.getIdByIdentifier(identifier)));
+            int id = UserAuth.dao.getIdByIdentifier(identifier);
+            List<String> roles = new ArrayList<String>(UserRole.dao.getRolesById(id));
+            List<String> authorities = new ArrayList<String>(RoleRight.dao.getRightsById(id));
+            shiroPrincipal.setRoles(roles);
+            shiroPrincipal.setAuthorities(authorities);
+            shiroPrincipal.setAuthorized(true);
             return info;
         } else{
             return null;

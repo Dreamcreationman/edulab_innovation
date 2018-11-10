@@ -10,6 +10,8 @@ import com.jfinal.aop.Invocation;
  * FUNCTION : A global interceptor (it's of no use temporarily)
  */
 public class GlobalInterceptor implements Interceptor {
+
+    @Override
     public void intercept(Invocation invocation) {
         invocation.invoke();
     }

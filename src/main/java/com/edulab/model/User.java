@@ -9,4 +9,13 @@ import com.edulab.model_base.BaseUser;
 public class User extends BaseUser<User> {
 
     public static final User dao = new User();
+
+    /**
+     * Get user base info by user id
+     * @param userId
+     * @return
+     */
+    public User getUserByUserID(int userId){
+        return findFirst("select * from edu_user where user_id = ?", userId);
+    }
 }

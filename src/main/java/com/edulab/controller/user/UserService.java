@@ -106,14 +106,14 @@ public class UserService {
         msg = "登录成功";
         if (msg.equals("登录成功")) {
             //save sesstion for 3 days
-            if (subject == null) {
+            if (subject != null) {
                 subject.getSession().setTimeout(3*24*60*60);
                 if (rememberMe && token !=null){
                     token.setRememberMe(rememberMe);
                 }
                 updateLoginSuccess(userAuth.getIdentifier(), lastLoginIp);
 
-                }
+            }
         }
         return msg;
     }
