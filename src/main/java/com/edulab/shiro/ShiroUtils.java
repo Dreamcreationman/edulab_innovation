@@ -5,7 +5,7 @@ import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.subject.Subject;
 
 /**
- * CREATED BY Dream
+ * CREATED BY Yank
  * DATE : 2018/11/3
  * MAIL : YANK.TENYOND@GMAIL.COM
  * FUNCTION : Provide Some basic operation for shiro authority or authentication

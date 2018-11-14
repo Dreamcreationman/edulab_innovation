@@ -62,7 +62,6 @@ public class ShiroRealm extends AuthorizingRealm {
 
         if (UserAuth.dao.isUserExists(identifier)) {
             String credentialSql = UserAuth.dao.getSaltedCredential(identifier);
-            SimpleAuthenticationInfo info = new SimpleAuthenticationInfo(identifier, credentialSql, getName());
             ShiroPrincipal shiroPrincipal = new ShiroPrincipal(User.dao.getUserByUserID(UserAuth.dao.getIdByIdentifier(identifier)));
             int id = UserAuth.dao.getIdByIdentifier(identifier);
             List<String> roles = new ArrayList<String>(UserRole.dao.getRolesById(id));
@@ -70,6 +69,7 @@ public class ShiroRealm extends AuthorizingRealm {
             shiroPrincipal.setRoles(roles);
             shiroPrincipal.setAuthorities(authorities);
             shiroPrincipal.setAuthorized(true);
+            SimpleAuthenticationInfo info = new SimpleAuthenticationInfo(shiroPrincipal, credentialSql, getName());
             return info;
         } else{
             return null;
