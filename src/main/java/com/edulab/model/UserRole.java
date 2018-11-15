@@ -22,7 +22,7 @@ public class UserRole extends BaseUserRole<UserRole> {
 	 * @param userId
 	 * @return
 	 */
-	public Set<String> getRolesById(int userId){
+	public Set<String> getRoleNamesByUserId(int userId){
         Set<String> roles = new HashSet();
         String sql = "select role_id from edu_user_role where user_id = ?";
         List<Record> roleAll = Db.find(sql,userId);
@@ -34,4 +34,19 @@ public class UserRole extends BaseUserRole<UserRole> {
         }
         return roles;
     }
+
+	/**
+	 * Get Roles By User ID
+	 * @param userId
+	 * @return
+	 */
+	public Set<Integer> getRoleIDByUserID(int userId){
+		Set<Integer> roleIds = new HashSet();
+        String sql = "select role_id from edu_user_role where user_id = ?";
+        List<Record> roleAll = Db.find(sql,userId);
+        for (int i =0; i <roleAll.size();i++){
+        	roleIds.add(roleAll.get(i).getInt("role_id"));
+        }
+        return roleIds;
+	}
 }

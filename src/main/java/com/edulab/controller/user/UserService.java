@@ -1,5 +1,6 @@
 package com.edulab.controller.user;
 
+import com.edulab.model.Role;
 import com.edulab.model.User;
 import com.edulab.model.UserAuth;
 import com.edulab.shiro.ShiroCredentialMatcher;
@@ -56,6 +57,8 @@ public class UserService {
         String salt = CryptoUtils.getSalt();
         String credential = CryptoUtils.getHash(auth.getCredential(), salt);
         auth.set("user_id", user.getUserId()).set("identity_type", "username").set("inside_login", 0).set("salt", salt).set("credential", credential).save();
+        //设置默认角色为学生
+        new Role().set("user_id",user.getUserId()).set("role_id", 03).save();
     }
 
 

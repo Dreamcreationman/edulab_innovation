@@ -39,7 +39,7 @@ public class ShiroRealm extends AuthorizingRealm {
     protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principalCollection) {
         String identifier = (String) principalCollection.getPrimaryPrincipal();
         int id = UserAuth.dao.getIdByIdentifier(identifier);
-        Set<String> roles = UserRole.dao.getRolesById(id);
+        Set<String> roles = UserRole.dao.getRoleNamesByUserId(id);
         Set<String> authorities = RoleRight.dao.getRightsById(id);
         SimpleAuthorizationInfo simpleAuthorizationInfo =
                 new SimpleAuthorizationInfo();
@@ -64,7 +64,7 @@ public class ShiroRealm extends AuthorizingRealm {
             String credentialSql = UserAuth.dao.getSaltedCredential(identifier);
             ShiroPrincipal shiroPrincipal = new ShiroPrincipal(User.dao.getUserByUserID(UserAuth.dao.getIdByIdentifier(identifier)));
             int id = UserAuth.dao.getIdByIdentifier(identifier);
-            List<String> roles = new ArrayList<String>(UserRole.dao.getRolesById(id));
+            List<String> roles = new ArrayList<String>(UserRole.dao.getRoleNamesByUserId(id));
             List<String> authorities = new ArrayList<String>(RoleRight.dao.getRightsById(id));
             shiroPrincipal.setRoles(roles);
             shiroPrincipal.setAuthorities(authorities);
